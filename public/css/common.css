@@ -1,0 +1,68 @@
+/*
+ * Local web fonts
+ *
+ * Put your licensed font files in /public/fonts using one of these names:
+ *   Jost-VariableFont_wght.woff2  (preferred)
+ *   Jost-VariableFont_wght.ttf    (fallback)
+ *   Kazesawa-Regular.woff2        (preferred)
+ *   Kazesawa-Regular.ttf          (fallback)
+ *   Kazesawa-Bold.woff2           (optional)
+ *   Kazesawa-Bold.ttf             (optional)
+ *
+ * The browser downloads them from this Node.js server, so TIMER/MASTER look
+ * the same on PCs and phones even when the fonts are not installed locally.
+ */
+@font-face {
+  font-family: "Jost";
+  src:
+    url("../fonts/Jost-VariableFont_wght.woff2") format("woff2-variations"),
+    url("../fonts/Jost-VariableFont_wght.ttf") format("truetype-variations");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Kazesawa";
+  src:
+    url("../fonts/Kazesawa-Regular.woff2") format("woff2"),
+    url("../fonts/Kazesawa-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 300 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Kazesawa";
+  src:
+    url("../fonts/Kazesawa-Bold.woff2") format("woff2"),
+    url("../fonts/Kazesawa-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700 900;
+  font-display: swap;
+}
+
+:root {
+  --bg: #062c45;
+  --panel: #0a3855;
+  --panel-2: #0d4365;
+  --text: #f6f7f8;
+  --muted: #9cb1c0;
+  --line: rgba(255,255,255,.13);
+  --danger: #ff5353;
+  --accent: #d9edf8;
+  --success: #7de1b0;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; min-height: 100%; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Kazesawa", "Noto Sans JP", "Yu Gothic", "Meiryo", sans-serif;
+}
+button, input, textarea { font: inherit; }
+.timer-font {
+  font-family: "Jost", "Avenir Next", "Helvetica Neue", sans-serif;
+  font-variant-numeric: tabular-nums;
+}
